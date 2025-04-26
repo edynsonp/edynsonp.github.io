@@ -46,8 +46,8 @@ header h1:hover {
 /* Logo */
 .logo {
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: 10px;
+  right: 0px;
   width: 120px;
   height: auto;
   transition: opacity 0.3s ease;
@@ -162,4 +162,24 @@ footer {
   footer {
       font-size: 14px;
   }
+}
+
+/* Estilo para las banderas de idiomas */
+.idiomas {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.idiomas img {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.idiomas img:hover {
+  transform: scale(1.2);
 }

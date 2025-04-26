@@ -13,7 +13,19 @@
     <div class="contenedor-menu">
 
         <header>
-            <h1>Menú</h1>
+            <div class="idiomas">
+                <button onclick="cambiarIdioma('es')"></button>
+                <button onclick="cambiarIdioma('en')"></button>
+                <button onclick="cambiarIdioma('fr')"></button>
+              </div>
+              <div class="idiomas">
+                <img src="bandera-colombia.png" alt="Español" onclick="cambiarIdioma('es')">
+                <img src="estados-unidos.png" alt="English" onclick="cambiarIdioma('en')">
+                <img src="bandera-francia.png" alt="Français" onclick="cambiarIdioma('fr')">
+              </div>
+              
+            <h1 id="titulo-principal">Menú</h1>
+
             <img src="logo.jpg" alt="Logo restaurante" class="logo">
         </header>
 
@@ -21,7 +33,8 @@
 
             <!-- Columna Izquierda -->
             <section class="categoria">
-                <h2>TORTAS</h2>
+                <h2 id="tortas">TORTAS</h2>
+
 
                 <h3>TOKIO</h3>
                 <ul>
@@ -43,7 +56,7 @@
                     <li>Pan telera, carne asada, jamón, frijoles refritos, lechuga, tomate, queso, jalapeño, cebolla, aguacate, salsa chipotle (opcional)......23,00$</li>
                 </ul>
 
-                <h2>SABORES EXPLOSIVOS</h2>
+                <h2 id="sabores">SABORES EXPLOSIVOS</h2>
 
                 <h3>Salchipapas</h3>
                 <ul>
@@ -63,7 +76,9 @@
 
             <!-- Columna Derecha -->
             <section class="categoria">
-                <h2>HAMBURGUESAS</h2>
+                <h2 id="hamburguesas">HAMBURGUESAS</h2>
+
+
 
                 <h3>RIO</h3>
                 <ul>
@@ -95,17 +110,18 @@
                     <li>Pan de la casa, beyond burger (vegetariana), queso, lechuga, tomate, cebolla caramelizada, hummus, papa chips, salsa de la casa (ajo)..........15,99$</li>
                 </ul>
 
-                <div class="nota">
+                <div id="nota" class="nota">...</div>
+
                     TODAS LAS HAMBURGUESAS VIENEN CON PAPA FRANCESA O ENSALADA.<br>
                     EXTRA TOPPING DE VEGETALES: 2,99$
                 </div>
 
-                <h2>NACHOS DE PELÍCULA</h2>
+                <h2 id="nachos">NACHOS DE PELÍCULA</h2>
                 <ul>
                     <li>Nachos Sergio Marquina: nachos con carne o pollo, pico de gallo, crema, salsa roja mexicana, vegetales, queso....................18,99$</li>
                 </ul>
 
-                <h2>BEBIDAS</h2>
+                <h2 id="bebidas">BEBIDAS</h2>
                 <ul>
                     <li>Gaseosas..........................................................................................3,99$</li>
                     <li>Jugos naturales: mora, maracuyá, guanábana..................5,99$</li>
@@ -121,6 +137,51 @@
         </footer>
 
     </div>
-
+    <script>
+        const traducciones = {
+          es: {
+            titulo: "Menú",
+            tortas: "TORTAS",
+            sabores: "SABORES EXPLOSIVOS",
+            hamburguesas: "HAMBURGUESAS",
+            nachos: "NACHOS DE PELÍCULA",
+            bebidas: "BEBIDAS",
+            nota: "TODAS LAS HAMBURGUESAS VIENEN CON PAPA FRANCESA O ENSALADA. EXTRA TOPPING DE VEGETALES: 2,99$",
+            footer: "3425 Boul Dagenais, Laval H7P-4V9 Tel: 514-649-4953"
+          },
+          en: {
+            titulo: "Menu",
+            tortas: "SANDWICHES",
+            sabores: "EXPLOSIVE FLAVORS",
+            hamburguesas: "BURGERS",
+            nachos: "MOVIE NACHOS",
+            bebidas: "DRINKS",
+            nota: "ALL BURGERS COME WITH FRENCH FRIES OR SALAD. EXTRA VEGETABLE TOPPING: $2.99",
+            footer: "3425 Boul Dagenais, Laval H7P-4V9 Tel: 514-649-4953"
+          },
+          fr: {
+            titulo: "Menu",
+            tortas: "SANDWICHS",
+            sabores: "SAVEURS EXPLOSIVES",
+            hamburguesas: "BURGERS",
+            nachos: "NACHOS DE CINÉMA",
+            bebidas: "BOISSONS",
+            nota: "TOUS LES BURGERS SONT SERVIS AVEC DES FRITES OU UNE SALADE. SUPPLÉMENT LÉGUMES: 2,99$",
+            footer: "3425 Boul Dagenais, Laval H7P-4V9 Tel: 514-649-4953"
+          }
+        };
+        
+        function cambiarIdioma(idioma) {
+          document.getElementById("titulo-principal").textContent = traducciones[idioma].titulo;
+          document.getElementById("tortas").textContent = traducciones[idioma].tortas;
+          document.getElementById("sabores").textContent = traducciones[idioma].sabores;
+          document.getElementById("hamburguesas").textContent = traducciones[idioma].hamburguesas;
+          document.getElementById("nachos").textContent = traducciones[idioma].nachos;
+          document.getElementById("bebidas").textContent = traducciones[idioma].bebidas;
+          document.getElementById("nota").textContent = traducciones[idioma].nota;
+          document.getElementById("footer").innerHTML = traducciones[idioma].footer;
+        }
+        </script>
+        
 </body>
 </html>
