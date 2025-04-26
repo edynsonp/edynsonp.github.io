@@ -1,222 +1,165 @@
 /* Estilo general */
 body {
-    background-color: #8b0000;
-    font-family: 'Bebas Neue', 'Impact', sans-serif;
-    margin: 0;
-    padding: 40px 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  
-  /* Contenedor que agrupa todo */
-  .contenedor-menu {
-    background: rgba(0, 0, 0, 0.7) url('fondo-casa-de-papel.jpg') no-repeat center center;
-    background-size: cover;
-    background-blend-mode: darken;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
-    width: 90%;
-    max-width: 1200px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #ffffff; /* <-- LETRA BLANCA */
-  }
-  
-  /* Cabecera */
-  header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  header h1 {
-    font-size: 60px;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 8px;
-    margin: 0;
-    text-shadow: 2px 2px 8px #000000;
-  }
-  
-  /* Contenedor principal del menú */
-  main {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
-  
-  /* Categorías */
-  .categoria h2 {
-    background-color: #ff0000;
-    color: #fff;
-    padding: 12px 20px;
-    display: inline-block;
-    font-size: 28px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 6px #000;
-  }
-  
-  .categoria ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .categoria li {
-    margin-bottom: 12px;
-    line-height: 1.8;
-    font-size: 20px;
-  }
-  
-  /* Subtítulos con ícono */
-  .categoria h3 {
-    font-size: 26px;
-    margin-top: 30px;
-    color: #ff0000;
-    display: flex;
-    align-items: center;
-  }
-  
-  .categoria h3 img {
-    width: 28px;
-    margin-right: 12px;
-  }
-  
-  /* Notas importantes */
-  .nota {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    font-weight: bold;
-    padding: 8px 12px;
-    margin-top: 12px;
-    display: inline-block;
-    border-radius: 5px;
-    font-size: 18px;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #000;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-    font-size: 16px;
-    margin-top: 40px;
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    main {
-      grid-template-columns: 1fr;
-      gap: 20px;
-      padding: 0;
-    }
-  
-    header h1 {
-      font-size: 40px;
-    }
-  
-    .categoria h2 {
-      font-size: 22px;
-      padding: 8px 14px;
-    }
-  
-    .categoria h3 {
-      font-size: 20px;
-    }
-  
-    .categoria li {
-      font-size: 16px;
-    }
-  
-    footer {
-      font-size: 30px;
-      padding: 15px;
-    }
-  }
-  
-  /* Efectos para el título principal */
-header h1 {
-    font-size: 60px;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 8px;
-    margin: 0;
-    text-shadow: 2px 2px 8px #000000;
-    transition: all 0.3s ease-in-out; /* Añadir transición */
-  }
-  
-  /* Hover sobre el título h1 */
-  header h1:hover {
-    color: #ff0000; /* Cambiar color cuando pasa el mouse */
-    transform: scale(1.1); /* Efecto de escala */
-    text-shadow: 4px 4px 12px #000000; /* Aumentar la sombra al pasar el cursor */
-  }
-  
-  /* Estilo para los títulos de categorías h2 */
-  .categoria h2 {
-    background-color: #ff0000;
-    color: #fff;
-    padding: 12px 20px;
-    font-size: 30px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 6px #000;
-    text-align: center;
-    text-transform: uppercase;
-    transition: transform 0.3s ease, color 0.3s ease; /* Añadir transición */
-  }
-  
-  /* Hover sobre los títulos h2 */
-  .categoria h2:hover {
-    color: #111; /* Cambiar el color de texto */
-    transform: scale(1.05); /* Efecto de escala */
-    box-shadow: 4px 4px 10px #ff0000; /* Aumentar la sombra */
-  }
-  
-  /* Estilo para los subtítulos h3 */
-  .categoria h3 {
-    font-size: 24px;
-    margin-top: 20px;
-    color: #ff0000;
-    text-shadow: 1px 1px 5px #000;
-    transition: all 0.3s ease; /* Añadir transición */
-  }
-  
-  /* Hover sobre los subtítulos h3 */
-  .categoria h3:hover {
-    color: #ffffff; /* Cambiar el color del texto */
-    background-color: #ff0000; /* Fondo rojo al pasar el mouse */
-    padding: 5px 10px; /* Aumentar el padding */
-    transform: scale(1.1); /* Efecto de escala */
-    text-shadow: 3px 3px 10px #000; /* Aumentar sombra */
-  }
-  /* Estilo para el header */
+  margin: 0;
+  padding: 0;
+  font-family: 'Bebas Neue', 'Impact', sans-serif;
+  background-color: #000; /* Fondo negro neutro */
+}
+
+/* Contenedor que agrupa todo */
+.contenedor-menu {
+  background: rgba(0, 0, 0, 0.7) url('fondo-casa-de-papel.jpg') no-repeat center center;
+  background-size: cover;
+  background-blend-mode: darken;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px;
+  color: #ffffff;
+}
+
+/* Cabecera */
 header {
-    position: relative; /* Necesario para posicionar el logo de forma absoluta */
-    text-align: center;
-    padding: 30px 0;
+  position: relative;
+  text-align: center;
+  padding: 30px 0;
+}
+
+header h1 {
+  font-size: 60px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  margin: 0;
+  text-shadow: 2px 2px 8px #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+header h1:hover {
+  color: #ff0000;
+  transform: scale(1.1);
+  text-shadow: 4px 4px 12px #000000;
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 120px;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 1;
+}
+
+/* Contenedor principal del menú */
+main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* Categorías */
+.categoria h2 {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px #000;
+  text-align: center;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.categoria h2:hover {
+  color: #111;
+  transform: scale(1.05);
+  box-shadow: 4px 4px 10px #ff0000;
+}
+
+.categoria ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.categoria li {
+  margin-bottom: 12px;
+  line-height: 1.8;
+  font-size: 20px;
+}
+
+/* Subtítulos */
+.categoria h3 {
+  font-size: 24px;
+  margin-top: 20px;
+  color: #ff0000;
+  text-shadow: 1px 1px 5px #000;
+  transition: all 0.3s ease;
+}
+
+.categoria h3:hover {
+  color: #ffffff;
+  background-color: #ff0000;
+  padding: 5px 10px;
+  transform: scale(1.1);
+  text-shadow: 3px 3px 10px #000;
+}
+
+/* Notas */
+.nota {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px 12px;
+  margin-top: 12px;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main {
+      grid-template-columns: 1fr;
   }
-  
-  /* Estilo para el logo */
-  .logo {
-    position: absolute; /* Posiciona el logo de manera absoluta */
-    top: 10px; /* Ajusta la distancia desde la parte superior */
-    right: -500px; /* Ajusta la distancia desde el borde derecho */
-    width: 300px; /* Ajusta el tamaño del logo */
-    height: auto; /* Mantiene la proporción original */
-    transition: opacity 0.3s ease; /* Transición para cuando pase el cursor */
+
+  header h1 {
+      font-size: 40px;
   }
-  
-  /* Efecto de hover en el logo */
-  .logo:hover {
-    opacity: 1; /* El logo se vuelve completamente visible al pasar el cursor */
+
+  .categoria h2 {
+      font-size: 22px;
+      padding: 10px 16px;
   }
-  
-  
+
+  .categoria h3 {
+      font-size: 20px;
+  }
+
+  .categoria li {
+      font-size: 16px;
+  }
+
+  footer {
+      font-size: 14px;
+  }
+}
